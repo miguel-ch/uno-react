@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: blueviolet;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: yellow;
+}
+
+#uno-button {
+  background-image: linear-gradient(to right, rgb(239 68 68) 0%, rgb(59 130 246) 51%, rgb(239 68 68) 100%);
+  animation: blinker 1s linear infinite;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+#uno-button:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+#player-deck img {
+  transition: ease-in-out 0.3s;
+}
+
+#player-deck img:hover {
+  margin-right: 1.5rem;
+  transform: scale(1.2);
+}
+
+.take-card:hover {
+  animation: expanding 0.8s linear infinite;
+}
+@keyframes expanding {
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 5px #eee;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    box-shadow: 0 0 10px #eee;
+  }
+}
