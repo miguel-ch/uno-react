@@ -1,0 +1,11 @@
+export enum ACTIONS {
+  REGULAR_MOVEMENT,
+  INVALID_MOVEMENT,
+
+  // Wildcards
+  SKIP,
+  REVERSE,
+  DRAW_TWO,
+  DRAW_FOUR,
+  COLOR_CHANGE,
+}
